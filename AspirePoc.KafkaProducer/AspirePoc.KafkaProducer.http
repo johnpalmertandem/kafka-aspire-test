@@ -1,0 +1,6 @@
+@AspirePoc.KafkaProducer_HostAddress = http://localhost:5030
+
+GET {{AspirePoc.KafkaProducer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

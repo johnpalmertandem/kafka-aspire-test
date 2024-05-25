@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>dotnet-KafkaConsumer-CBDE0BF1-1927-49EF-B8DD-3EB477A4FCED</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Aspire.Confluent.Kafka" Version="8.0.1" />
+        <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Data\Migrations\" />
+      <Folder Include="Data\Repositories\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\AspirePoc.ServiceDefaults\AspirePoc.ServiceDefaults.csproj" />
+    </ItemGroup>
+</Project>
