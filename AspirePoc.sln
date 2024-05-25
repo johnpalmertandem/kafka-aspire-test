@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspirePoc.ServiceDefaults",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspirePoc.KafkaConsumer", "AspirePoc\AspirePoc.KafkaConsumer\AspirePoc.KafkaConsumer.csproj", "{B1AB51BC-F6A4-4736-8B21-CFA3E9E98DF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspirePoc.KafkaProducer", "AspirePoc.KafkaProducer\AspirePoc.KafkaProducer.csproj", "{89196506-19CE-4F00-BE3C-D41236DDBF38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspirePoc.KafkaProducer", "AspirePoc\AspirePoc.KafkaProducer\AspirePoc.KafkaProducer.csproj", "{89196506-19CE-4F00-BE3C-D41236DDBF38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -16,7 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\AspirePoc.KafkaProducer\AspirePoc.KafkaProducer.csproj" />
+      <ProjectReference Include="..\AspirePoc.KafkaProducer\AspirePoc.KafkaProducer.csproj" />
       <ProjectReference Include="..\AspirePoc.KafkaConsumer\AspirePoc.KafkaConsumer.csproj" />
     </ItemGroup>
 

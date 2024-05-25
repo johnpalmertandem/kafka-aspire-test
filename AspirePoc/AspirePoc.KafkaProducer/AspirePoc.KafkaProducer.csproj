@@ -13,7 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AspirePoc\AspirePoc.ServiceDefaults\AspirePoc.ServiceDefaults.csproj" />
+      <ProjectReference Include="..\AspirePoc.ServiceDefaults\AspirePoc.ServiceDefaults.csproj" />
     </ItemGroup>
 
 </Project>
