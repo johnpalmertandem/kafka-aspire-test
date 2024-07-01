@@ -23,6 +23,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AspirePoc.ServiceDefaults\AspirePoc.ServiceDefaults.csproj" />
+      <ProjectReference Include="..\AspirePoc.Shared\AspirePoc.Shared.csproj" />
     </ItemGroup>
 </Project>

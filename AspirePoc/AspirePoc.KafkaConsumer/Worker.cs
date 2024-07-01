@@ -5,38 +5,32 @@ namespace AspirePoc.KafkaConsumer;
 public class Worker : BackgroundService
 {
     private readonly ILogger<Worker> _logger;
-    private readonly IConsumer<Ignore, string> _consumer;
+    private readonly IConsumer<string, string> _consumer;
 
-    public Worker(ILogger<Worker> logger, IConsumer<Ignore, string> consumer)
+    public Worker(ILogger<Worker> logger, IConsumer<string, string> consumer)
     {
         _logger = logger;
         _consumer = consumer;
+        _consumer.Subscribe("topic");
     }
 
     protected override Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        long i = 0;
-        return Task.Factory.StartNew(async () =>
+        return Task.Run(() =>
         {
-            _consumer.Subscribe("topic");
             while (!stoppingToken.IsCancellationRequested)
             {
-                ConsumeResult<Ignore, string>? result = default;
+                _logger.LogInformation("just running ");
                 try
                 {
-                    result = _consumer.Consume(TimeSpan.FromSeconds(1));
+                    var result = _consumer.Consume(stoppingToken);
+                    _logger.LogInformation($"Consumed message '{result.Message.Value}' at: '{result.Topic}'.");
                 }
-                catch (ConsumeException ex) when (ex.Error.Code == ErrorCode.UnknownTopicOrPart)
+                catch (ConsumeException e)
                 {
-                    await Task.Delay(100);
-                    continue;
-                }
-                i++;
-                if (i % 1000 == 0)
-                {
-                    _logger.LogInformation($"Received {i} messages. current offset is '{result!.Offset}'");
+                    _logger.LogError($"Consume error: {e.Error.Reason}");
                 }
             }
-        }, stoppingToken, TaskCreationOptions.LongRunning, TaskScheduler.Current);
+        }, stoppingToken);
     }
 }

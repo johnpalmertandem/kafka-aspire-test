@@ -5,10 +5,12 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <IsAspireSharedProject>true</IsAspireSharedProject>
+        <RootNamespace>AspirePoc.ServiceDefaults</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
 
         <PackageReference Include="Microsoft.Extensions.Http.Resilience" Version="8.3.0"/>
         <PackageReference Include="Microsoft.Extensions.ServiceDiscovery" Version="8.0.0-preview.6.24214.1"/>

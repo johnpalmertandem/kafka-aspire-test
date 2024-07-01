@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspirePoc.AppHost", "AspirePoc\AspirePoc.AppHost\AspirePoc.AppHost.csproj", "{E7066C7B-1DD8-4AD2-A9AD-DECB8A11D071}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspirePoc.ServiceDefaults", "AspirePoc\AspirePoc.ServiceDefaults\AspirePoc.ServiceDefaults.csproj", "{2BFE0F72-E76C-40D7-B364-BB15D122F345}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspirePoc.Shared", "AspirePoc\AspirePoc.Shared\AspirePoc.Shared.csproj", "{2BFE0F72-E76C-40D7-B364-BB15D122F345}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspirePoc.KafkaConsumer", "AspirePoc\AspirePoc.KafkaConsumer\AspirePoc.KafkaConsumer.csproj", "{B1AB51BC-F6A4-4736-8B21-CFA3E9E98DF7}"
 EndProject
